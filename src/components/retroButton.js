@@ -4,7 +4,7 @@ const RetroButton = props => {
   return (
     <div className="wrapper">
       <div role="button" className="retro-btn">
-        <div className="btn" onClick={() => props.handleRetroBtn()}>
+        <div className="btn" onMouseMove={() => props.handleRetroBtn()}>
           <span className="btn-inner">
             <span className="content-wrapper">
               <span className="btn-content">
