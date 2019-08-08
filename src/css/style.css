@@ -49,22 +49,37 @@ a:focus {
 .introduction {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0; }
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%; }
   .introduction h3 {
     font-weight: 700;
     font-size: 9rem;
     margin: 0;
     text-shadow: 6px 4px rgba(13, 13, 13, 0.3); }
   .introduction .label {
-    padding: 1rem 2rem;
-    background-image: repeating-linear-gradient(45deg, #2C365E, #2C365E 1px, transparent 1px, transparent 4px);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2rem;
-    color: #F8C296; }
+    color: #2C365E;
+    position: relative; }
+    .introduction .label:before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 6px;
+      background-image: repeating-linear-gradient(45deg, #2C365E, #2C365E 1px, transparent 1px, transparent 4px);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-left: 2px solid #0B3954;
+      left: 0;
+      bottom: 0;
+      background-size: 6px 6px;
+      margin-left: -2.35rem; }
 
 .web-grid {
   display: grid;

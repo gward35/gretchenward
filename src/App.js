@@ -41,7 +41,7 @@ const App = () => {
       <main>
         <div className="introduction">
           <h3>Gretchen Ward</h3>
-          <p class="label">Front End Developer</p>
+          <p className="label">Front End Developer</p>
           {/* <Button text="See What I've Been Working On" /> */}
           <RetroButton handleRetroBtn={handleRetroBtn} />
         </div>
