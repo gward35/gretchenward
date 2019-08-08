@@ -1,7 +1,5 @@
 import React from 'react';
 import Nav from './components/nav';
-import Introduction from './components/introduction';
-import Button from './components/button';
 import RetroButton from './components/retroButton';
 import './css/style.css';
 
@@ -41,9 +39,12 @@ const App = () => {
     <div className="App">
       <Nav />
       <main>
-        <Introduction />
-        <Button text="See What I've Been Working On" />
-        <RetroButton handleRetroBtn={handleRetroBtn} />
+        <div className="introduction">
+          <h3>Gretchen Ward</h3>
+          <p class="label">Front End Developer</p>
+          {/* <Button text="See What I've Been Working On" /> */}
+          <RetroButton handleRetroBtn={handleRetroBtn} />
+        </div>
       </main>
     </div>
   )
