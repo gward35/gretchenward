@@ -11,13 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 button {
+  background-color: transparent;
   color: #fff;
   border: 3px solid #fff;
   padding: 1em;
-  background-size: 400%;
-  border-radius: 50px;
   font-size: 1em;
-  transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 0.05rem; }
@@ -26,41 +24,49 @@ a:hover,
 a:focus {
   text-decoration: none; }
 
-.navigation ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  align-items: baseline; }
-  .navigation ul li {
-    margin-right: 3%; }
-    .navigation ul li.monogram {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.5em;
-      font-weight: 700; }
-    .navigation ul li a {
-      color: #2C365E;
-      text-decoration: none;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
-      transition: box-shadow 0.2s linear; }
-      .navigation ul li a:hover, .navigation ul li a:focus {
-        box-shadow: 0 3px 0 0 #2C365E; }
+section {
+  width: 100%;
+  position: relative; }
+  section.blue-section {
+    background-color: #EBF4FA; }
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 99; }
+  .navigation ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: baseline; }
+    .navigation ul li {
+      margin-right: 3%; }
+      .navigation ul li.monogram {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        font-weight: 700; }
+      .navigation ul li a {
+        color: #2C365E;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        transition: box-shadow 0.2s linear; }
+        .navigation ul li a:hover, .navigation ul li a:focus {
+          box-shadow: 0 3px 0 0 #2C365E; }
 
 .introduction {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 100%; }
+  justify-content: center;
+  width: 100%;
+  height: 100vh; }
   .introduction h3 {
     font-weight: 700;
     font-size: 9rem;
     margin: 0;
-    text-shadow: 6px 4px rgba(13, 13, 13, 0.3); }
+    text-shadow: 0 7px rgba(13, 13, 13, 0.3); }
   .introduction .label {
     font-weight: 700;
     font-size: 2rem;
@@ -130,10 +136,10 @@ picture {
   .btn:before {
     content: " ";
     background-color: rgba(13, 13, 13, 0.3);
-    width: calc(100% - 4px);
+    width: calc(100% - 6px);
     height: calc(100% - 6px);
     bottom: 0;
-    left: 6px;
+    left: 3px;
     position: absolute;
     border-radius: 3px;
     z-index: 1;
