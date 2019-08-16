@@ -29,6 +29,11 @@ section {
   position: relative; }
   section.blue-section {
     background-color: #EBF4FA; }
+  section.dark-blue-section {
+    background-color: #2C365E;
+    color: #F8C296; }
+  section:first-child {
+    padding: 0 0; }
 
 .navigation {
   position: absolute;
@@ -54,7 +59,9 @@ section {
         .navigation ul li a:hover, .navigation ul li a:focus {
           box-shadow: 0 3px 0 0 #2C365E; }
 
-.introduction {
+.introduction,
+.about,
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,17 +69,23 @@ section {
   justify-content: center;
   width: 100%;
   height: 100vh; }
-  .introduction h3 {
+  .introduction h3,
+  .about h3,
+  .contact-form h3 {
     font-weight: 700;
     font-size: 9rem;
     margin: 0;
     text-shadow: 0 7px rgba(13, 13, 13, 0.3); }
-  .introduction .label {
+  .introduction .label,
+  .about .label,
+  .contact-form .label {
     font-weight: 700;
     font-size: 2rem;
     color: #2C365E;
     position: relative; }
-    .introduction .label:before {
+    .introduction .label:before,
+    .about .label:before,
+    .contact-form .label:before {
       content: '';
       display: block;
       position: absolute;
@@ -86,6 +99,42 @@ section {
       bottom: 0;
       background-size: 6px 6px;
       margin-left: -2.35rem; }
+
+.contact-form {
+  display: flex;
+  justify-content: center; }
+  .contact-form form .control {
+    position: relative;
+    margin-bottom: 1rem; }
+    .contact-form form .control:before {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "\00a0";
+      position: absolute;
+      border-bottom: 2px solid #2C365E;
+      height: 0; }
+    .contact-form form .control:after {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      pointer-events: none; }
+    .contact-form form .control input, .contact-form form .control textarea {
+      background: none;
+      border: 0;
+      height: 2rem;
+      box-sizing: content-box;
+      padding: 1rem;
+      font-size: 1rem;
+      color: #2C365E; }
+      .contact-form form .control input::placeholder, .contact-form form .control textarea::placeholder {
+        color: #2C365E; }
+    .contact-form form .control textarea:before {
+      border-bottom: 0; }
 
 .web-grid {
   display: grid;
@@ -266,7 +315,8 @@ picture {
         .btn .btn-inner .content-wrapper .btn-content .btn-content-inner {
           display: block;
           -webkit-transition: opacity 75ms ease-out .1125s;
-          transition: opacity 75ms ease-out .1125s; }
+          transition: opacity 75ms ease-out .1125s;
+          font-size: 1.2rem; }
           .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
             content: attr(label);
             padding-top: 9.5px;

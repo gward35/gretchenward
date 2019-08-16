@@ -36,6 +36,15 @@ section {
   &.blue-section {
     background-color: #EBF4FA;
   }
+
+  &.dark-blue-section {
+    background-color: #2C365E;
+    color: #F8C296;
+  }
+
+  &:first-child {
+    padding: 0 0; 
+  }
 }
 
 
@@ -43,7 +52,7 @@ section {
   position: absolute;
   width: 100%;
   z-index: 99;
-  
+
 	ul {
 		display: flex;
 		flex-direction: row;
@@ -73,7 +82,9 @@ section {
 	}
 }
 
-.introduction {
+.introduction,
+.about,
+.contact-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -108,6 +119,59 @@ section {
       bottom: 0;
       background-size: 6px 6px;
       margin-left: -2.35rem;
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+
+  form {
+    .control {
+      position: relative;
+      margin-bottom: 1rem;
+
+      &:before {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "\00a0";
+        position: absolute;
+        border-bottom: 2px solid #2C365E;
+        height: 0;
+      }
+    
+      &:after {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+        pointer-events: none;
+      }
+
+      input, textarea {
+        background: none;
+        border: 0;
+        height: 2rem;
+        box-sizing: content-box;
+        padding: 1rem;
+        font-size: 1rem;
+        color: #2C365E;
+
+        &::placeholder {
+          color: #2C365E;
+        }
+      }
+
+      textarea {
+        &:before {
+          border-bottom: 0;
+        }
+      }
     }
   }
 }
@@ -349,6 +413,7 @@ picture {
           display: block;
           -webkit-transition: opacity 75ms ease-out .1125s;
           transition: opacity 75ms ease-out .1125s;
+          font-size: 1.2rem;
 
           &:before {
             content: attr(label);
