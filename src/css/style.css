@@ -83,6 +83,10 @@ section {
     font-size: 2rem;
     color: #2C365E;
     position: relative; }
+    .dark-blue-section .introduction .label, .dark-blue-section
+    .about .label, .dark-blue-section
+    .contact-form .label {
+      color: #F8C296; }
     .introduction .label:before,
     .about .label:before,
     .contact-form .label:before {
@@ -94,11 +98,16 @@ section {
       background-image: repeating-linear-gradient(45deg, #2C365E, #2C365E 1px, transparent 1px, transparent 4px);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-left: 2px solid #0B3954;
+      border-left: 2px solid #2C365E;
       left: 0;
       bottom: 0;
       background-size: 6px 6px;
       margin-left: -2.35rem; }
+      .dark-blue-section .introduction .label:before, .dark-blue-section
+      .about .label:before, .dark-blue-section
+      .contact-form .label:before {
+        border-left: 2px solid #F8C296;
+        background-image: repeating-linear-gradient(45deg, #F8C296, #F8C296 1px, transparent 1px, transparent 4px); }
 
 .contact-form {
   display: flex;

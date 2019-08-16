@@ -105,6 +105,11 @@ section {
 		font-size: 2rem;
     color: #2C365E;
     position: relative;
+
+    .dark-blue-section & {
+      color: #F8C296;
+    }
+
     &:before {
       content: '';
       display: block;
@@ -114,11 +119,16 @@ section {
       background-image: repeating-linear-gradient(45deg,#2C365E, #2C365E 1px, transparent 1px, transparent 4px);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-left: 2px solid #0B3954;
+      border-left: 2px solid #2C365E;
       left: 0;
       bottom: 0;
       background-size: 6px 6px;
       margin-left: -2.35rem;
+
+      .dark-blue-section & {
+        border-left: 2px solid #F8C296;
+        background-image: repeating-linear-gradient(45deg,#F8C296,#F8C296 1px, transparent 1px, transparent 4px);
+      }
     }
   }
 }
@@ -192,11 +202,6 @@ picture {
 	}
 }
 
-.description {
-
-}
-
-
 .btn {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -217,13 +222,10 @@ picture {
   transition: opacity .1s ease-out;
   z-index: 5;
   -webkit-font-smoothing: antialiased;
-
-  // size
   width: 375px;
   height: 57px;
   font-size: 1.3rem;
   line-height: 24px;
-  
   background-color: transparent;
   text-decoration-color: initial;
   border-color: initial;
