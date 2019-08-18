@@ -4,20 +4,18 @@ const handleRetroBtn = (event, btnRef, setBtnClass) => {
     const leftOffset = btnRef.current.getBoundingClientRect().left;
     const btnWidth = btnRef.current.offsetWidth;
     const myPosX = event.pageX;
-    let newClass = "";
+
     // if on left 1/3 width of btn
     if(myPosX < (leftOffset + .3 * btnWidth) ) {
-      newClass = 'btn-left'
+      setBtnClass('btn-left');
     } else {
       // if on right 1/3 width of btn
       if(myPosX > (leftOffset + .65 * btnWidth) ) {
-        newClass = 'btn-right';
+        setBtnClass('btn-right');
       } else {
-        newClass = 'btn-center';
+        setBtnClass('btn-center');
       }
     }
-
-    setBtnClass(newClass);
 }
 
 const RetroButton = props => {

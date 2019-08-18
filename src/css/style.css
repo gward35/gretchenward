@@ -139,6 +139,7 @@ section {
       box-sizing: content-box;
       padding: 1rem;
       font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
       color: #2C365E; }
       .contact-form form .control input::placeholder, .contact-form form .control textarea::placeholder {
         color: #2C365E; }
