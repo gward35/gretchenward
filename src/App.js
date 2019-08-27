@@ -16,16 +16,16 @@ const App = () => {
             <h3>Gretchen Ward</h3>
             <p className="label">Front End Developer</p>
             {/* <Button text="See What I've Been Working On" /> */}
-            <RetroButton ref={button} text="See What I've Been Working On" />
+            <RetroButton text="See What I've Been Working On" />
           </div>
         </section>
         <section className="dark-blue-section">
-          <div className="about">
+          <div className="about" name="about">
             <About />
           </div>
         </section>
         <section className="blue-section">
-          <div className="contact-form">
+          <div className="contact-form" name="contact">
             <Contact />
           </div>
         </section>
