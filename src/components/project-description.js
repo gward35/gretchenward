@@ -3,8 +3,8 @@ import RetroButton from './retroButton';
 
 const ProjectDescription = props => (
   <div className={props.className}>
-    <h2>{props.title}</h2>
-    <h3>{props.subtitle}</h3>
+    <h4>{props.title}</h4>
+    <h5>{props.subtitle}</h5>
     <p>{props.description}</p>
     <RetroButton text="View Site"/>
   </div>

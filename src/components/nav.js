@@ -8,8 +8,8 @@ const Nav = () => {
       <ul className="nav-items">
         <li className="monogram"><RouterLink to="/">GW</RouterLink></li>
         <li><RouterLink to="/web">Web</RouterLink></li>
-        <li><Link to="/#about" smooth={true} duration={500} activeClass="active">About</Link></li>
-        <li><Link to="/#contact" smooth={true} duration={500} activeClass="active">Contact</Link></li>
+        <li><Link to="/#about" smooth={true} duration={500}>About</Link></li>
+        <li><Link to="/#contact" smooth={true} duration={500}>Contact</Link></li>
       </ul>
     </nav>
   )

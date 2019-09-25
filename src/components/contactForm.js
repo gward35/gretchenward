@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RetroButton from './retroButton';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Submitting Name ${name}`);
+  }
+
   return (
-    <form className="contact" id="contactForm">
+    <form className="contact" method="POST" onSubmit={handleSubmit} id="contactForm">
       <div className="control">
-        <input type="text" className="form-control" 
-        placeholder="Full Name" aria-label="Name" required
+        <input type="text" name="name" className="form-control" 
+        placeholder="Full Name" aria-label="Name" value={name} onChange={e => setName(e.target.value)} required
         data-validation-required-message="Please enter your name" />
-      </div>   
+      </div>
       <div className="control">
-        <input type="email" className="form-control" placeholder="Email" aria-label="Email" required data-validation-required-message="Please enter your email" />
-      </div>  
+        <input type="email" name="email" className="form-control" placeholder="Email" aria-label="Email" 
+        value={email} onChange={e => setEmail(e.target.value)}
+        required data-validation-required-message="Please enter your email" />
+      </div>
       <div className="control">
-        <textarea rows="10" cols="100" className="form-control" 
+        <textarea rows="10" name="message" className="form-control" 
         placeholder="Message" aria-label="Message" required
+        value={message} onChange={e => setMessage(e.target.value)}
         data-validation-required-message="Please enter your message" minLength="5" data-validation-minlength-message="Min 5 characters" maxLength="250"></textarea>
-      </div>      
+      </div>
       <div className="success"></div>
-      <RetroButton text="Send" />
+      <RetroButton type="submit" text="Send" />
     </form>
   )
 }

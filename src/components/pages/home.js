@@ -7,8 +7,8 @@ const Home = () => (
   <>
     <section>
       <div className="introduction">
-        <h3>Gretchen Ward</h3>
-        <p className="label">Front End Developer</p>
+        <h1>Gretchen Ward</h1>
+        <h3 className="decorator">Front End Developer</h3>
         <RetroButton text="See What I've Been Working On" />
       </div>
     </section>

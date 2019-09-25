@@ -11,7 +11,7 @@ const Web = () => (
       <ProjectItem>
         <img src={stsci} alt="Space Telescope Science Institute" />
         <ProjectDescription 
-          className="blue-background description"
+          className="description"
           title="STSCI" 
           subtitle="Web Development" 
           description="Redesign for the Space Telescope Science Institute. 
@@ -32,7 +32,7 @@ const Web = () => (
       <ProjectItem>
         <img src={realtimegrid} alt="U.S. ELECTRIC SYSTEM OPERATING DATA" />
         <ProjectDescription 
-          className="blue-background description"
+          className="description"
           title="930" 
           subtitle="Web Development" 
           description="The Realtime Grid is a near real time reporting system of energy 

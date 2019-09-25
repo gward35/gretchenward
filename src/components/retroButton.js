@@ -22,7 +22,7 @@ const RetroButton = props => {
   const [btnClass, setBtnClass] = useState(null);
   const btnRef = useRef(null);
   return (
-    <div role="button" ref={btnRef} className={`btn ${btnClass}`} onMouseMove={event => handleRetroBtn({event, btnRef, setBtnClass})} onMouseLeave={() => setBtnClass(null)}>
+    <div role="button" ref={btnRef} type={props.type} className={`btn ${btnClass}`} onMouseMove={event => handleRetroBtn({event, btnRef, setBtnClass})} onMouseLeave={() => setBtnClass(null)}>
       <span className="btn-inner">
         <span className="content-wrapper">
           <span className="btn-content">
