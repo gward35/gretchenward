@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 
 const handleRetroBtn = ({event, btnRef, setBtnClass}) => {
   const leftOffset = btnRef.current.getBoundingClientRect().left;
@@ -19,13 +18,13 @@ const handleRetroBtn = ({event, btnRef, setBtnClass}) => {
   }
 }
 
-const RetroButton = props => {
+const RetroButtonExternal = props => {
   const [btnClass, setBtnClass] = useState(null);
   const btnRef = useRef(null);
   return (
     
     <div role="button" ref={btnRef} type={props.type} className={`btn ${btnClass}`} onMouseMove={event => handleRetroBtn({event, btnRef, setBtnClass})} onMouseLeave={() => setBtnClass(null)}>
-      <RouterLink to={{ pathname: props.link}} smooth="true" duration={500}>
+      <a href={props.link}>
       <span className="btn-inner">
         <span className="content-wrapper">
           <span className="btn-content">
@@ -33,9 +32,9 @@ const RetroButton = props => {
           </span>
         </span>
       </span>
-      </RouterLink>
+      </a>
     </div>
   )
 }
 
-export default RetroButton;
+export default RetroButtonExternal;

@@ -9,7 +9,7 @@ const Home = () => (
       <div className="introduction">
         <h1>Gretchen Ward</h1>
         <h3 className="decorator">Front End Developer</h3>
-        <RetroButton text="See What I've Been Working On" />
+        <RetroButton link="/web" text="See What I've Been Working On" />
       </div>
     </section>
     <section className="dark-blue-background">

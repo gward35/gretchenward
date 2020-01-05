@@ -12,7 +12,7 @@ const Contact = () => {
   }
 
   return (
-    <form className="contact" method="POST" onSubmit={handleSubmit} id="contactForm">
+    <form className="contact" onSubmit={handleSubmit} id="contactForm">
       <div className="control">
         <input type="text" name="name" className="form-control" 
         placeholder="Full Name" aria-label="Name" value={name} onChange={e => setName(e.target.value)} required

@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectItem from '../project-item';
 import ProjectDescription from '../project-description';
+import RetroButtonExternal from '../retroButtonExternal'
 import stsci from '../../img/stsci.jpg';
 import trilateral from '../../img/trilateral.jpg';
 import realtimegrid from '../../img/930.jpg'
@@ -17,7 +18,9 @@ const Web = () => (
           description="Redesign for the Space Telescope Science Institute. 
           Development relied heavily on designing and building reusable components 
           for STSCI content editors to use in their CMS. Site focuses on accessibility 
-          standards semantic html and jquery." />
+          standards semantic html and jquery.">
+          <RetroButtonExternal link="http://www.stsci.edu/" text="View Site" />
+        </ProjectDescription>
       </ProjectItem>
       <ProjectItem>
         <img src={trilateral} alt="North American Cooperation on Energy Information" />
@@ -27,7 +30,9 @@ const Web = () => (
           subtitle="Web Design | Web Development" 
           description="Crude oil, electricity, and natural gas trade data between the 
           United States, Canada, and Mexico. Built with Angular and Highcharts this site 
-          uses Angular Translate to translate content into English, Spanish, and French" />
+          uses Angular Translate to translate content into English, Spanish, and French">
+          <RetroButtonExternal link="http://www.nacei.org/" text="View Site" />
+        </ProjectDescription>
       </ProjectItem>
       <ProjectItem>
         <img src={realtimegrid} alt="U.S. ELECTRIC SYSTEM OPERATING DATA" />
@@ -41,7 +46,9 @@ const Web = () => (
           Authorities. Users can get real up to the hour data about the U.S. Eletrical Grid. 
           The sites framework was built on Angular and features a custom Highcharts build for 
           all the graphs and charts as well as a custom Moment library to handle all the 
-          timezone and datetime changes." />
+          timezone and datetime changes.">
+          <RetroButtonExternal link="https://www.eia.gov/realtime_grid/#/status?end=20160809T12" text="View Site"/>
+        </ProjectDescription>
       </ProjectItem>
     </div>
   </section>
