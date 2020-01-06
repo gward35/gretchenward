@@ -8,29 +8,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Submitting Name ${name}`);
+    const templateId = 'template_Y3ZLajIp';
+    sendFeedback(templateId, {message_html: message, from_name: name, reply_to: email})
+  }
+
+  const sendFeedback = (templateId, variables) => {
+    window.emailjs.send('gmail', templateId, variables)
+    .then(res => { console.log('email sent!')})
+    .catch(err => { console.log('uh-oh something when wrong on my end sorry about that', err)})
   }
 
   return (
-    <form className="contact" onSubmit={handleSubmit} id="contactForm">
+    <form className="contact" id="contactForm">
       <div className="control">
         <input type="text" name="name" className="form-control" 
-        placeholder="Full Name" aria-label="Name" value={name} onChange={e => setName(e.target.value)} required
-        data-validation-required-message="Please enter your name" />
+        placeholder="Full Name" aria-label="Name" value={name} onChange={e => setName(e.target.value)} required />
       </div>
       <div className="control">
         <input type="email" name="email" className="form-control" placeholder="Email" aria-label="Email" 
-        value={email} onChange={e => setEmail(e.target.value)}
-        required data-validation-required-message="Please enter your email" />
+        value={email} onChange={e => setEmail(e.target.value)} required />
       </div>
       <div className="control">
-        <textarea rows="10" name="message" className="form-control" 
+        <textarea name="message" className="form-control" 
         placeholder="Message" aria-label="Message" required
-        value={message} onChange={e => setMessage(e.target.value)}
-        data-validation-required-message="Please enter your message" minLength="5" data-validation-minlength-message="Min 5 characters" maxLength="250"></textarea>
+        value={message} onChange={e => setMessage(e.target.value)} minLength="5" maxLength="250"></textarea>
       </div>
-      <div className="success"></div>
-      <RetroButton type="submit" text="Send" />
+      <RetroButton type="submit" text="Send" onClick={handleSubmit} />
     </form>
   )
 }

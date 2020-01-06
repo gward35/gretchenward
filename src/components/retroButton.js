@@ -24,7 +24,7 @@ const RetroButton = props => {
   const btnRef = useRef(null);
   return (
     
-    <div role="button" ref={btnRef} type={props.type} className={`btn ${btnClass}`} onMouseMove={event => handleRetroBtn({event, btnRef, setBtnClass})} onMouseLeave={() => setBtnClass(null)}>
+    <div role="button" ref={btnRef} type={props.type} className={`btn ${btnClass}`} onMouseMove={event => handleRetroBtn({event, btnRef, setBtnClass})} onMouseLeave={() => setBtnClass(null)} onClick={props.onClick}>
       <RouterLink to={{ pathname: props.link}} smooth="true" duration={500}>
       <span className="btn-inner">
         <span className="content-wrapper">
