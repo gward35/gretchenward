@@ -5,10 +5,21 @@ import RetroButtonExternal from '../retroButtonExternal'
 import stsci from '../../img/stsci.jpg';
 import trilateral from '../../img/trilateral.jpg';
 import realtimegrid from '../../img/930.jpg'
+import gimmepatterns from '../../img/gimmepatterns.png'
 
 const Web = () => (
   <section>
     <div className="web-projects">
+    <ProjectItem>
+        <img src={gimmepatterns} alt="Gimme patterns pattern generator" />
+        <ProjectDescription 
+          className="description"
+          title="Gimme Patterns" 
+          subtitle="Web / API  Development + Generative Code" 
+          description="Gimmie patterns used generative code concepts to draw patterns server side via Node.js. We can access the API via an endpoint and create patterns with query parameters or use the ui on the front end site to generate patterns for us. Patterns have several optons such as patter type, color, tile size, canvas size, and seed. There is also a random option which will randomize these parameters.">
+          <RetroButtonExternal link="https://gimmepatterns-staging.herokuapp.com/" text="View Site"/>
+        </ProjectDescription>
+      </ProjectItem>
       <ProjectItem>
         <img src={stsci} alt="Space Telescope Science Institute" />
         <ProjectDescription 
