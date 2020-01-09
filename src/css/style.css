@@ -190,7 +190,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-between; }
   .web-projects .project {
     border: 1px solid #2C365E;
     border-radius: 3px;

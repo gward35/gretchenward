@@ -253,7 +253,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   
   .project {
     border: 1px solid $navy;
