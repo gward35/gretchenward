@@ -16,6 +16,10 @@ body {
 	color: $navy;
 }
 
+main {
+  margin: 0 1.5rem;
+}
+
 h1 {
   font-size: 4rem;
   letter-spacing: 0.1rem;
@@ -250,15 +254,24 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 2.5rem;
   
   .project {
     border: 1px solid $navy;
     border-radius: 3px;
     box-shadow: 1px 1px 2px $darker-navy;
-    max-width: 30%;
     height: 100%;
-    flex: 1 1 30%;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 768px) {
+      flex: 0 1 calc(100% - 1rem);
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 959px) {
+      flex: 0 1 calc(50% - 1rem);
+    }
+
+    @media screen and (min-width: 960px) {
+      flex: 0 1 calc(33% - 1rem);
+    }
 
     .description {
       display: flex;
