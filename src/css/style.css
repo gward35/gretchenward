@@ -8,9 +8,6 @@ body {
   background-color: #F8C296;
   color: #2C365E; }
 
-main {
-  margin: 0 1.5rem; }
-
 h1 {
   font-size: 4rem;
   letter-spacing: 0.1rem;
@@ -190,7 +187,8 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 0 2.5rem; }
   .web-projects .project {
     border: 1px solid #2C365E;
     border-radius: 3px;
@@ -200,16 +198,16 @@ section {
     @media screen and (max-width: 768px) {
       .web-projects .project {
         flex: 0 1 calc(100% - 1rem); } }
-    @media screen and (min-width: 769px) and (max-width: 959px) {
+    @media screen and (min-width: 769px) and (max-width: 1059px) {
       .web-projects .project {
         flex: 0 1 calc(50% - 1rem); } }
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1060px) {
       .web-projects .project {
         flex: 0 1 calc(33% - 1rem); } }
     .web-projects .project .description {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       padding: 0 2rem 2rem 2rem;
       height: 100%; }
       .web-projects .project .description .btn {
