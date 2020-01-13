@@ -393,3 +393,16 @@ section {
             transition: opacity .3s ease-out, background-color .1125s ease-in;
             opacity: 1;
             z-index: -1; }
+
+.toasts-wrapper {
+  position: relative;
+  top: 30px;
+  right: 30px; }
+  .toasts-wrapper .toast {
+    display: flex;
+    border: 1px solid #2C365E;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #181E34;
+    position: relative; }
+    .toasts-wrapper .toast .toast-text {
+      padding: 1rem; }

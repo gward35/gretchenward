@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import RetroButton from './retroButton';
+import useToast from './Toast/useToast';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const toast = useToast()
+  const showSuccess = () => {
+    toast.add('Message sent successfully!')
+  }
+  const showError = () => { 
+    return toast.add('Uh oh, something went wrong :(')
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,8 +22,13 @@ const Contact = () => {
 
   const sendFeedback = (templateId, variables) => {
     window.emailjs.send('gmail', templateId, variables)
-    .then(res => { console.log('email sent!')})
-    .catch(err => { console.log('uh-oh something when wrong on my end sorry about that', err)})
+    .then(res => { 
+      showSuccess()
+      console.log('Message Sent Successfully!') })
+    .catch(err => { 
+      showError()
+      console.log('uh-oh something when wrong on my end sorry about that', err)
+    })
   }
 
   return (
