@@ -395,8 +395,8 @@ section {
             z-index: -1; }
 
 .toasts-wrapper {
-  position: relative;
-  top: 30px;
+  position: absolute;
+  top: 215%;
   right: 30px; }
   .toasts-wrapper .toast {
     display: flex;
