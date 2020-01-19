@@ -400,9 +400,20 @@ section {
   right: 30px; }
   .toasts-wrapper .toast {
     display: flex;
+    font-family: 'Open Sans Condensed', sans-serif;
     border: 1px solid #2C365E;
+    background-color: #F8C296;
     border-radius: 3px;
     box-shadow: 1px 1px 2px #181E34;
-    position: relative; }
+    position: relative;
+    vertical-align: middle; }
     .toasts-wrapper .toast .toast-text {
       padding: 1rem; }
+    .toasts-wrapper .toast .toast-close {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: bold;
+      border: 0;
+      color: #2C365E;
+      position: absolute;
+      top: -17px;
+      right: -10px; }

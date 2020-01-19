@@ -524,13 +524,26 @@ section {
 
   .toast {
     display: flex;
+    font-family: 'Open Sans Condensed', sans-serif;
     border: 1px solid $navy;
+    background-color: $peachy-orange;
     border-radius: 3px;
     box-shadow: 1px 1px 2px $darker-navy;
     position: relative;
+    vertical-align: middle;
 
     .toast-text {
       padding: 1rem;
+    }
+
+    .toast-close {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: bold;
+      border: 0;
+      color: $navy;
+      position: absolute;
+      top: -17px;
+      right: -10px;
     }
   }
 }
