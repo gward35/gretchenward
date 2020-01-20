@@ -18,6 +18,11 @@ const Contact = () => {
     e.preventDefault();
     const templateId = 'template_Y3ZLajIp';
     sendFeedback(templateId, {message_html: message, from_name: name, reply_to: email})
+
+    //clear fields after submit
+    setName('')
+    setEmail('')
+    setMessage('')
   }
 
   const sendFeedback = (templateId, variables) => {
