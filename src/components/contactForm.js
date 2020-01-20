@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RetroButton from './retroButton';
+import RetroButtonSubmit from './retroButtonSubmit';
 import useToast from './Toast/useToast';
 
 const Contact = () => {
@@ -32,7 +32,7 @@ const Contact = () => {
   }
 
   return (
-    <form className="contact" id="contactForm">
+    <form className="contact" id="contactForm" onSubmit={handleSubmit}>
       <div className="control">
         <input type="text" name="name" className="form-control" 
         placeholder="Full Name" aria-label="Name" value={name} onChange={e => setName(e.target.value)} required />
@@ -43,10 +43,10 @@ const Contact = () => {
       </div>
       <div className="control">
         <textarea name="message" className="form-control" 
-        placeholder="Message" aria-label="Message" required
-        value={message} onChange={e => setMessage(e.target.value)} minLength="5" maxLength="250"></textarea>
+        placeholder="Message" aria-label="Message"
+        value={message} onChange={e => setMessage(e.target.value)} minLength="5" maxLength="250" required></textarea>
       </div>
-      <RetroButton type="submit" text="Send" onClick={handleSubmit} />
+      <RetroButtonSubmit type="submit" text="Send" />
     </form>
   )
 }
