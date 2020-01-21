@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ProjectDescription = props => (
   <div className={props.className}>
@@ -9,5 +9,4 @@ const ProjectDescription = props => (
   </div>
 )
 
-
-export default ProjectDescription;
+export default ProjectDescription

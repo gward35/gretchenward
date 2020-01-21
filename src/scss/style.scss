@@ -1,19 +1,19 @@
-$navy: #2C365E;
-$darker-navy: #181E34;
-$light-blue: #EBF4FA;
-$peachy-orange: #F8C296;
-$white: #FFF;
+$navy: #2c365e;
+$darker-navy: #181e34;
+$light-blue: #ebf4fa;
+$peachy-orange: #f8c296;
+$white: #fff;
 $black: #000;
 
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
   font-family: 'Archivo Black', sans-serif;
   font-size: 16px;
-	background-color: $peachy-orange;
-	color: $navy;
+  background-color: $peachy-orange;
+  color: $navy;
 }
 
 h1 {
@@ -65,7 +65,7 @@ a {
   .btn & {
     &:hover,
     &:focus {
-      color: red !important
+      color: red !important;
     }
   }
 
@@ -78,30 +78,32 @@ a {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 button {
   background-color: transparent;
-	color: $white;
-	border: 0;
-	padding: 1em;
-	font-size: 1em;
-	cursor: pointer;
-	font-weight: 700;
-	letter-spacing: 0.05rem;
+  color: $white;
+  border: 0;
+  padding: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
 }
 
 picture {
-	display: block;
-	position: relative;
+  display: block;
+  position: relative;
 }
 
 img {
   width: 100%;
 }
 
-input, textarea {
+input,
+textarea {
   background: none;
   border: 0;
   height: 2rem;
@@ -128,7 +130,7 @@ section {
   position: relative;
 
   &:first-child {
-    padding: 0 0; 
+    padding: 0 0;
   }
 }
 
@@ -147,21 +149,21 @@ section {
   z-index: 99;
   margin: 1.5rem 0;
 
-	ul {
-		display: flex;
-		flex-direction: row;
-		list-style: none;
-		align-items: baseline;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: baseline;
 
-		li {
+    li {
       margin-right: 3%;
       font-family: 'Open Sans Condensed', sans-serif;
 
-			&.monogram {
-				font-family: 'Archivo Black'
-			}
-		}
-	}
+      &.monogram {
+        font-family: 'Archivo Black';
+      }
+    }
+  }
 }
 
 .decorator {
@@ -180,7 +182,13 @@ section {
     position: absolute;
     height: 100%;
     width: 6px;
-    background-image: repeating-linear-gradient(45deg, $navy, $navy 1px, transparent 1px, transparent 4px);
+    background-image: repeating-linear-gradient(
+      45deg,
+      $navy,
+      $navy 1px,
+      transparent 1px,
+      transparent 4px
+    );
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-left: 2px solid $navy;
@@ -190,8 +198,14 @@ section {
     margin-left: -2.35rem;
 
     .dark-blue-background & {
-      border-left: 2px solid #F8C296;
-      background-image: repeating-linear-gradient(45deg,$peachy-orange,$peachy-orange 1px, transparent 1px, transparent 4px);
+      border-left: 2px solid #f8c296;
+      background-image: repeating-linear-gradient(
+        45deg,
+        $peachy-orange,
+        $peachy-orange 1px,
+        transparent 1px,
+        transparent 4px
+      );
     }
   }
 }
@@ -199,17 +213,17 @@ section {
 .introduction,
 .about,
 .contact-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   justify-content: center;
   width: 100%;
   height: 100vh;
 
-	h1 {
+  h1 {
     margin: 0;
-	}
+  }
 }
 
 .contact-form {
@@ -220,17 +234,17 @@ section {
     .control {
       position: relative;
       margin-bottom: 1rem;
-  
+
       &:before {
         left: 0;
         right: 0;
         bottom: 0;
-        content: "\00a0";
+        content: '\00a0';
         position: absolute;
         border-bottom: 2px solid $navy;
         height: 0;
       }
-    
+
       &:after {
         left: 0;
         right: 0;
@@ -238,7 +252,7 @@ section {
         content: '';
         position: absolute;
         transform: scaleX(0);
-        transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+        transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         pointer-events: none;
       }
     }
@@ -251,7 +265,7 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 2.5rem;
-  
+
   .project {
     border: 1px solid $navy;
     border-radius: 3px;
@@ -300,8 +314,8 @@ section {
   text-rendering: auto;
   text-decoration: none;
   text-align: center;
-  -webkit-transition: opacity .1s ease-out;
-  transition: opacity .1s ease-out;
+  -webkit-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
   z-index: 5;
   -webkit-font-smoothing: antialiased;
   width: 375px;
@@ -321,13 +335,13 @@ section {
 
   &:hover {
     .btn-content-inner:before {
-      background-color: rgba(13,13,13,.1);
+      background-color: rgba(13, 13, 13, 0.1);
     }
   }
 
   &:before {
-    content: " ";
-    background-color: rgba(13, 13, 13, .3);
+    content: ' ';
+    background-color: rgba(13, 13, 13, 0.3);
     width: calc(100% - 6px);
     height: calc(100% - 6px);
     bottom: 0;
@@ -335,16 +349,18 @@ section {
     position: absolute;
     border-radius: 3px;
     z-index: 1;
-    -webkit-transition: background .12s ease-out, -webkit-transform .12s ease-out;
-    transition: background .12s ease-out, -webkit-transform .12s ease-out;
-    transition: transform .12s ease-out, background .12s ease-out;
-    transition: transform .12s ease-out, background .12s ease-out, -webkit-transform .12s ease-out;
+    -webkit-transition: background 0.12s ease-out,
+      -webkit-transform 0.12s ease-out;
+    transition: background 0.12s ease-out, -webkit-transform 0.12s ease-out;
+    transition: transform 0.12s ease-out, background 0.12s ease-out;
+    transition: transform 0.12s ease-out, background 0.12s ease-out,
+      -webkit-transform 0.12s ease-out;
   }
 
   &.btn-left {
     &:before {
-      -webkit-transform: skewY(1deg) translate3d(0,-.5px,0);
-      transform: skewY(1deg) translate3d(0,-.5px,0);
+      -webkit-transform: skewY(1deg) translate3d(0, -0.5px, 0);
+      transform: skewY(1deg) translate3d(0, -0.5px, 0);
     }
 
     .btn-content {
@@ -355,8 +371,8 @@ section {
 
   &.btn-right {
     &:before {
-      -webkit-transform: skewY(-1deg) translate3d(0,-.5px,0);
-      transform: skewY(-1deg) translate3d(0,-.5px,0);
+      -webkit-transform: skewY(-1deg) translate3d(0, -0.5px, 0);
+      transform: skewY(-1deg) translate3d(0, -0.5px, 0);
     }
 
     .btn-content {
@@ -367,16 +383,16 @@ section {
 
   &.btn-center {
     &:before {
-      -webkit-transform: translate3d(0,-1px,0);
-      transform: translate3d(0,-1px,0);
+      -webkit-transform: translate3d(0, -1px, 0);
+      transform: translate3d(0, -1px, 0);
     }
 
     .btn-content {
-      -webkit-transform: translate3d(0,1px,0);
-      transform: translate3d(0,1px,0);
+      -webkit-transform: translate3d(0, 1px, 0);
+      transform: translate3d(0, 1px, 0);
     }
   }
-  
+
   .btn-inner {
     display: block;
     height: 100%;
@@ -395,9 +411,10 @@ section {
       height: calc(100% - 3px);
       margin-top: -3px;
 
-      &:after, &:before, 
-      & .btn-content:after, 
-      & .btn-content:before, 
+      &:after,
+      &:before,
+      & .btn-content:after,
+      & .btn-content:before,
       & .btn-content .btn-content-inner:before {
         display: block;
         position: absolute;
@@ -409,20 +426,23 @@ section {
 
       &:before {
         background-color: $darker-navy;
-        content: " ";
+        content: ' ';
         border-radius: 3px;
         top: auto;
         bottom: -3px;
         z-index: 1;
-        -webkit-transition: background .185s ease-out, -webkit-transform .185s ease-out;
-        transition: background .185s ease-out, -webkit-transform .185s ease-out;
-        transition: transform .185s ease-out, background .185s ease-out;
-        transition: transform .185s ease-out, background .185s ease-out, -webkit-transform .185s ease-out;
+        -webkit-transition: background 0.185s ease-out,
+          -webkit-transform 0.185s ease-out;
+        transition: background 0.185s ease-out,
+          -webkit-transform 0.185s ease-out;
+        transition: transform 0.185s ease-out, background 0.185s ease-out;
+        transition: transform 0.185s ease-out, background 0.185s ease-out,
+          -webkit-transform 0.185s ease-out;
       }
 
       &:after {
         background-color: rgba(13, 13, 13, 0.15);
-        content: " ";
+        content: ' ';
         border-radius: 3px;
         z-index: 3;
         width: 0;
@@ -452,12 +472,18 @@ section {
         z-index: 3;
         overflow: hidden;
         padding: 0 16px;
-        -webkit-transition: border .185s ease-out,background .185s ease-out,color .185s ease-out,-webkit-transform .185s ease-out;
-        transition: border .185s ease-out,background .185s ease-out,color .185s ease-out,-webkit-transform .185s ease-out;
-        transition: border .185s ease-out,transform .185s ease-out,background .185s ease-out,color .185s ease-out;
-        transition: border .185s ease-out,transform .185s ease-out,background .185s ease-out,color .185s ease-out,-webkit-transform .185s ease-out;
-        
-        &:before, &:after {
+        -webkit-transition: border 0.185s ease-out, background 0.185s ease-out,
+          color 0.185s ease-out, -webkit-transform 0.185s ease-out;
+        transition: border 0.185s ease-out, background 0.185s ease-out,
+          color 0.185s ease-out, -webkit-transform 0.185s ease-out;
+        transition: border 0.185s ease-out, transform 0.185s ease-out,
+          background 0.185s ease-out, color 0.185s ease-out;
+        transition: border 0.185s ease-out, transform 0.185s ease-out,
+          background 0.185s ease-out, color 0.185s ease-out,
+          -webkit-transform 0.185s ease-out;
+
+        &:before,
+        &:after {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -467,26 +493,31 @@ section {
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center;
-          color: rgba(255,255,255,.8);
+          color: rgba(255, 255, 255, 0.8);
           opacity: 0;
-          -webkit-transition: opacity .1125s ease-out .05s, -webkit-transform .185s ease-out .05s;
-          transition: opacity .1125s ease-out .05s, -webkit-transform .185s ease-out .05s;
-          transition: transform .185s ease-out .05s, opacity .1125s ease-out .05s;
-          transition: transform .185s ease-out .05s, opacity .1125s ease-out .05s, -webkit-transform .185s ease-out .05s;
+          -webkit-transition: opacity 0.1125s ease-out 0.05s,
+            -webkit-transform 0.185s ease-out 0.05s;
+          transition: opacity 0.1125s ease-out 0.05s,
+            -webkit-transform 0.185s ease-out 0.05s;
+          transition: transform 0.185s ease-out 0.05s,
+            opacity 0.1125s ease-out 0.05s;
+          transition: transform 0.185s ease-out 0.05s,
+            opacity 0.1125s ease-out 0.05s,
+            -webkit-transform 0.185s ease-out 0.05s;
         }
 
         &:before {
-          content: " ";
-          -webkit-transform: translate3d(0,50%,0);
-          transform: translate3d(0,50%,0);
+          content: ' ';
+          -webkit-transform: translate3d(0, 50%, 0);
+          transform: translate3d(0, 50%, 0);
         }
 
         &:after {
-          content: " ";
-          -webkit-transform: translate3d(0,-50%,0);
-          transform: translate3d(0,-50%,0);
+          content: ' ';
+          -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
         }
-        
+
         &:hover,
         &:focus {
           background-color: $navy;
@@ -495,19 +526,20 @@ section {
 
         .btn-content-inner {
           display: block;
-          -webkit-transition: opacity 75ms ease-out .1125s;
-          transition: opacity 75ms ease-out .1125s;
+          -webkit-transition: opacity 75ms ease-out 0.1125s;
+          transition: opacity 75ms ease-out 0.1125s;
           font-size: 1.2rem;
 
           &:before {
             content: attr(label);
             padding-top: 9.5px;
-            font-size: .8em;
+            font-size: 0.8em;
             font-family: 'Open Sans Condensed', sans-serif;
             font-weight: 700;
-            letter-spacing: .06em;
-            -webkit-transition: opacity .3s ease-out, background-color .1125s ease-in;
-            transition: opacity .3s ease-out, background-color .1125s ease-in;
+            letter-spacing: 0.06em;
+            -webkit-transition: opacity 0.3s ease-out,
+              background-color 0.1125s ease-in;
+            transition: opacity 0.3s ease-out, background-color 0.1125s ease-in;
             opacity: 1;
             z-index: -1;
           }
@@ -547,5 +579,3 @@ section {
     }
   }
 }
-
-

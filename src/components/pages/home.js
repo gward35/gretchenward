@@ -1,7 +1,7 @@
-import React from 'react';
-import RetroButton from '../retroButton';
-import About from '../about';
-import Contact from '../contactForm';
+import React from 'react'
+import RetroButton from '../retroButton'
+import About from '../about'
+import Contact from '../contactForm'
 
 const Home = () => (
   <>
@@ -25,4 +25,4 @@ const Home = () => (
   </>
 )
 
-export default Home;
+export default Home

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const BlockImg = props => {
   return (
@@ -8,4 +8,4 @@ const BlockImg = props => {
   )
 }
 
-export default BlockImg;
+export default BlockImg
