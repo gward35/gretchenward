@@ -6,10 +6,25 @@ import stsci from '../../img/stsci.jpg'
 import trilateral from '../../img/trilateral.jpg'
 import realtimegrid from '../../img/930.jpg'
 import gimmepatterns from '../../img/gimmepatterns.png'
+import sanjose from '../../img/sanjose.png'
 
 const Web = () => (
   <section>
     <div className="web-projects">
+      <ProjectItem>
+        <img src={sanjose} alt="City of San Jose web assistant" />
+        <ProjectDescription
+          className="description"
+          title="Resident Web Assistant"
+          subtitle="Web / API  Development + Language Processing"
+          description="The Resident Web Assistant App features a React and TypeScript front end and aims to assist residents with pertinent questions they may have about city services. Users can pick from suggested questions or submit a query to be pointed to the correct information."
+        >
+          <RetroButtonExternal
+            link="https://sj-assistant-staging.herokuapp.com/iframe/"
+            text="View Site"
+          />
+        </ProjectDescription>
+      </ProjectItem>
       <ProjectItem>
         <img src={gimmepatterns} alt="Gimme patterns pattern generator" />
         <ProjectDescription

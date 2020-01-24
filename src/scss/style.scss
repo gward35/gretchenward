@@ -263,7 +263,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 2.5rem;
 
   .project {
@@ -272,16 +272,24 @@ section {
     box-shadow: 1px 1px 2px $darker-navy;
     height: 100%;
     margin-bottom: 2rem;
+    margin-right: 1.6rem;
     @media screen and (max-width: 768px) {
       flex: 0 1 calc(100% - 1rem);
+      margin-right: 0;
     }
 
     @media screen and (min-width: 769px) and (max-width: 1059px) {
       flex: 0 1 calc(50% - 1rem);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
 
     @media screen and (min-width: 1060px) {
       flex: 0 1 calc(33% - 1rem);
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
 
     .description {
