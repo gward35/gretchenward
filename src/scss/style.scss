@@ -1,7 +1,7 @@
-$navy: #2c365e;
+$off-black: #1f271b;
 $darker-navy: #181e34;
-$light-blue: #ebf4fa;
-$peachy-orange: #f8c296;
+$plum: #240115;
+$off-white: #fcfaea;
 $white: #fff;
 $black: #000;
 
@@ -10,10 +10,10 @@ body {
   height: 100%;
   margin: 0;
   overflow-y: auto;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 16px;
-  background-color: $peachy-orange;
-  color: $navy;
+  background-color: $off-white;
+  color: $off-black;
 }
 
 h1 {
@@ -52,14 +52,14 @@ h5 {
 }
 
 p {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1rem;
 }
 
 a {
-  color: $navy;
+  color: $off-black;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 200;
   transition: box-shadow 0.2s linear;
 
   .btn & {
@@ -73,7 +73,7 @@ a {
   &:focus {
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 3px 0 0 $navy;
+    box-shadow: 0 3px 0 0 $off-black;
   }
 }
 
@@ -89,7 +89,7 @@ button {
   padding: 1em;
   font-size: 1em;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: 0.05rem;
 }
 
@@ -110,12 +110,12 @@ textarea {
   box-sizing: content-box;
   padding: 1rem 0;
   font-size: 1rem;
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: $navy;
+  font-family: 'Oswald', sans-serif;
+  color: $off-black;
   width: 100%;
 
   &::placeholder {
-    color: $navy;
+    color: $off-black;
   }
 }
 
@@ -134,13 +134,13 @@ section {
   }
 }
 
-.blue-background {
-  background-color: $light-blue;
+.off-white-background {
+  background-color: $off-white;
 }
 
-.dark-blue-background {
-  background-color: $navy;
-  color: $peachy-orange;
+.black-background {
+  background-color: $off-black;
+  color: $off-white;
 }
 
 .navigation {
@@ -157,23 +157,27 @@ section {
 
     li {
       margin-right: 3%;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 200;
 
       &.monogram {
-        font-family: 'Archivo Black';
+        a {
+          font-weight: 300;
+          color: #de3c4b;
+        }
       }
     }
   }
 }
 
 .decorator {
-  font-weight: 700;
+  font-weight: 300;
   font-size: 2rem;
-  color: $navy;
+  color: $off-black;
   position: relative;
 
-  .dark-blue-background & {
-    color: $peachy-orange;
+  .black-background & {
+    color: $off-white;
   }
 
   &:before {
@@ -184,14 +188,14 @@ section {
     width: 6px;
     background-image: repeating-linear-gradient(
       45deg,
-      $navy,
-      $navy 1px,
+      $off-white,
+      $off-white 1px,
       transparent 1px,
       transparent 4px
     );
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-left: 2px solid $navy;
+    border-left: 2px solid $off-white;
     left: 0;
     bottom: 0;
     background-size: 6px 6px;
@@ -201,8 +205,8 @@ section {
       border-left: 2px solid #f8c296;
       background-image: repeating-linear-gradient(
         45deg,
-        $peachy-orange,
-        $peachy-orange 1px,
+        $off-white,
+        $off-white 1px,
         transparent 1px,
         transparent 4px
       );
@@ -226,6 +230,11 @@ section {
   }
 }
 
+.introduction {
+  position: relative;
+  top: -72px;
+}
+
 .contact-form {
   display: flex;
   justify-content: center;
@@ -241,7 +250,7 @@ section {
         bottom: 0;
         content: '\00a0';
         position: absolute;
-        border-bottom: 2px solid $navy;
+        border-bottom: 2px solid $off-black;
         height: 0;
       }
 
@@ -267,7 +276,7 @@ section {
   padding: 0 2.5rem;
 
   .project {
-    border: 1px solid $navy;
+    border: 1px solid $off-black;
     border-radius: 3px;
     box-shadow: 1px 1px 2px $darker-navy;
     height: 100%;
@@ -408,7 +417,7 @@ section {
     .content-wrapper {
       position: relative;
       font-family: 'Open Sans Condensed', sans-serif;
-      font-weight: 700;
+      font-weight: 300;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -459,9 +468,9 @@ section {
 
       .btn-content {
         background-image: initial;
-        background-color: $peachy-orange;
-        border: 2px solid $navy;
-        color: $navy;
+        background-color: $off-white;
+        border: 2px solid $off-black;
+        color: $off-black;
         position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -528,8 +537,8 @@ section {
 
         &:hover,
         &:focus {
-          background-color: $navy;
-          color: $peachy-orange;
+          background-color: $off-black;
+          color: $off-white;
         }
 
         .btn-content-inner {
@@ -543,7 +552,7 @@ section {
             padding-top: 9.5px;
             font-size: 0.8em;
             font-family: 'Open Sans Condensed', sans-serif;
-            font-weight: 700;
+            font-weight: 300;
             letter-spacing: 0.06em;
             -webkit-transition: opacity 0.3s ease-out,
               background-color 0.1125s ease-in;
@@ -565,8 +574,8 @@ section {
   .toast {
     display: flex;
     font-family: 'Open Sans Condensed', sans-serif;
-    border: 1px solid $navy;
-    background-color: $peachy-orange;
+    border: 1px solid $off-black;
+    background-color: $off-white;
     border-radius: 3px;
     box-shadow: 1px 1px 2px $darker-navy;
     position: relative;
@@ -578,9 +587,9 @@ section {
 
     .toast-close {
       font-family: 'Open Sans Condensed', sans-serif;
-      font-weight: bold;
+      font-weight: 300;
       border: 0;
-      color: $navy;
+      color: $off-black;
       position: absolute;
       top: -17px;
       right: -10px;

@@ -12,12 +12,12 @@ const Home = () => (
         <RetroButton link="/web" text="See What I've Been Working On" />
       </div>
     </section>
-    <section className="dark-blue-background">
+    <section className="black-background">
       <div className="about" id="about">
         <About />
       </div>
     </section>
-    <section className="blue-background">
+    <section className="off-white-background">
       <div className="contact-form" id="contact">
         <Contact />
       </div>
