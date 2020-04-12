@@ -10,7 +10,7 @@ const Nav = () => {
           <RouterLink to="/">GW</RouterLink>
         </li>
         <li>
-          <RouterLink to="/web">Web</RouterLink>
+          <RouterLink to="/work">Work</RouterLink>
         </li>
         <li>
           <Link to="/#about" smooth="true" duration={500}>

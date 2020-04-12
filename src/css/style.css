@@ -6,7 +6,7 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
   background-color: #fcfaea;
-  color: #1f271b; }
+  color: #363e31; }
 
 h1 {
   font-size: 4rem;
@@ -43,7 +43,7 @@ p {
   font-size: 1rem; }
 
 a {
-  color: #1f271b;
+  color: #363e31;
   text-decoration: none;
   font-weight: 200;
   transition: box-shadow 0.2s linear; }
@@ -52,7 +52,7 @@ a {
   a:hover, a:focus {
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 3px 0 0 #1f271b; }
+    box-shadow: 0 3px 0 0 #363e31; }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
@@ -83,11 +83,11 @@ textarea {
   padding: 1rem 0;
   font-size: 1rem;
   font-family: 'Oswald', sans-serif;
-  color: #1f271b;
+  color: #363e31;
   width: 100%; }
   input::placeholder,
   textarea::placeholder {
-    color: #1f271b; }
+    color: #363e31; }
 
 textarea:before {
   border-bottom: 0; }
@@ -102,7 +102,7 @@ section {
   background-color: #fcfaea; }
 
 .black-background {
-  background-color: #1f271b;
+  background-color: #363e31;
   color: #fcfaea; }
 
 .navigation {
@@ -126,7 +126,7 @@ section {
 .decorator {
   font-weight: 300;
   font-size: 2rem;
-  color: #1f271b;
+  color: #363e31;
   position: relative; }
   .black-background .decorator {
     color: #fcfaea; }
@@ -179,7 +179,7 @@ section {
       bottom: 0;
       content: '\00a0';
       position: absolute;
-      border-bottom: 2px solid #1f271b;
+      border-bottom: 2px solid #363e31;
       height: 0; }
     .contact-form form .control:after {
       left: 0;
@@ -198,9 +198,9 @@ section {
   justify-content: flex-start;
   padding: 0 2.5rem; }
   .web-projects .project {
-    border: 1px solid #1f271b;
+    border: 1px solid #363e31;
     border-radius: 3px;
-    box-shadow: 1px 1px 2px #181e34;
+    box-shadow: 1px 1px 2px #0f120d;
     height: 100%;
     margin-bottom: 2rem;
     margin-right: 1.6rem; }
@@ -298,7 +298,7 @@ section {
     height: 100%; }
     .btn .btn-inner .content-wrapper {
       position: relative;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: 'Oswald', sans-serif;
       font-weight: 300;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -320,7 +320,7 @@ section {
         top: 0;
         left: 0; }
       .btn .btn-inner .content-wrapper:before {
-        background-color: #181e34;
+        background-color: #0f120d;
         content: ' ';
         border-radius: 3px;
         top: auto;
@@ -340,8 +340,8 @@ section {
       .btn .btn-inner .content-wrapper .btn-content {
         background-image: initial;
         background-color: #fcfaea;
-        border: 2px solid #1f271b;
-        color: #1f271b;
+        border: 2px solid #363e31;
+        color: #363e31;
         position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -389,7 +389,7 @@ section {
           -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0); }
         .btn .btn-inner .content-wrapper .btn-content:hover, .btn .btn-inner .content-wrapper .btn-content:focus {
-          background-color: #1f271b;
+          background-color: #363e31;
           color: #fcfaea; }
         .btn .btn-inner .content-wrapper .btn-content .btn-content-inner {
           display: block;
@@ -400,7 +400,7 @@ section {
             content: attr(label);
             padding-top: 9.5px;
             font-size: 0.8em;
-            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: 'Oswald', sans-serif;
             font-weight: 300;
             letter-spacing: 0.06em;
             -webkit-transition: opacity 0.3s ease-out, background-color 0.1125s ease-in;
@@ -414,20 +414,20 @@ section {
   right: 30px; }
   .toasts-wrapper .toast {
     display: flex;
-    font-family: 'Open Sans Condensed', sans-serif;
-    border: 1px solid #1f271b;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid #363e31;
     background-color: #fcfaea;
     border-radius: 3px;
-    box-shadow: 1px 1px 2px #181e34;
+    box-shadow: 1px 1px 2px #0f120d;
     position: relative;
     vertical-align: middle; }
     .toasts-wrapper .toast .toast-text {
       padding: 1rem; }
     .toasts-wrapper .toast .toast-close {
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: 'Oswald', sans-serif;
       font-weight: 300;
       border: 0;
-      color: #1f271b;
+      color: #363e31;
       position: absolute;
       top: -17px;
       right: -10px; }
