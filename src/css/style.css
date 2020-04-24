@@ -13,6 +13,9 @@ h1 {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   margin: 1rem 0; }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem; } }
 
 h2 {
   font-size: 3.1rem;
@@ -34,7 +37,8 @@ h4 {
 
 p {
   font-family: 'Oswald', sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  cursor: default; }
 
 a {
   color: #363e31;
@@ -116,31 +120,31 @@ section {
       .navigation ul li.monogram a {
         font-weight: 300;
         color: #de3c4b; }
+        .navigation ul li.monogram a:hover, .navigation ul li.monogram a:focus {
+          box-shadow: 0 3px 0 0 #de3c4b; }
 
-.decorator {
-  font-weight: 300;
-  font-size: 2rem;
-  color: #363e31;
-  position: relative; }
-  .black-background .decorator {
+.greeting {
+  font-size: 3rem; }
+  @media screen and (max-width: 768px) {
+    .greeting {
+      font-size: 2rem;
+      padding: 0 3rem;
+      margin-top: 0; } }
+  .greeting .name {
+    color: #87f5fb; }
+  .black-background .greeting {
     color: #fcfaea; }
-  .decorator:before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 6px;
-    background-image: repeating-linear-gradient(45deg, #fcfaea, #fcfaea 1px, transparent 1px, transparent 4px);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-left: 2px solid #fcfaea;
-    left: 0;
-    bottom: 0;
-    background-size: 6px 6px;
-    margin-left: -2.35rem; }
-    .dark-blue-background .decorator:before {
-      border-left: 2px solid #f8c296;
-      background-image: repeating-linear-gradient(45deg, #fcfaea, #fcfaea 1px, transparent 1px, transparent 4px); }
+
+.blurb {
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.5rem;
+  line-height: 1.8; }
+  @media screen and (max-width: 768px) {
+    .blurb {
+      max-width: 100%;
+      padding: 0 3rem;
+      font-size: 1.2rem; } }
 
 .introduction,
 .about,
@@ -156,6 +160,10 @@ section {
   .about h1,
   .contact-form h1 {
     margin: 0; }
+
+@media screen and (max-width: 768px) {
+  .about {
+    align-items: flex-start; } }
 
 .introduction {
   position: relative;
@@ -200,13 +208,16 @@ section {
     border: 1px solid #363e31;
     border-radius: 3px;
     box-shadow: 1px 1px 2px #0f120d;
-    height: 100%;
+    height: 760px;
     margin-bottom: 2rem;
-    margin-right: 1.6rem; }
+    margin-right: 1.6rem;
+    position: relative;
+    width: 100%; }
     @media screen and (max-width: 768px) {
       .web-projects .project {
         flex: 0 1 calc(100% - 1rem);
-        margin-right: 0; } }
+        margin-right: 0;
+        height: 100%; } }
     @media screen and (min-width: 769px) and (max-width: 1059px) {
       .web-projects .project {
         flex: 0 1 calc(50% - 1rem); }
@@ -223,8 +234,17 @@ section {
       align-items: flex-start;
       padding: 0 2rem 2rem 2rem;
       height: 100%; }
+      .web-projects .project .description p {
+        margin: 0 0 20px 0; }
       .web-projects .project .description .btn {
-        width: 12em; }
+        width: 12em;
+        position: absolute;
+        bottom: 30px; }
+        @media screen and (max-width: 768px) {
+          .web-projects .project .description .btn {
+            position: relative;
+            bottom: unset;
+            width: 100%; } }
 
 .btn {
   -webkit-user-select: none;
@@ -254,6 +274,9 @@ section {
   text-decoration-color: initial;
   border-color: initial;
   -webkit-tap-highlight-color: transparent; }
+  @media screen and (max-width: 768px) {
+    .btn {
+      width: 240px; } }
   .btn:focus {
     outline-color: 0;
     outline-style: none;
@@ -395,6 +418,9 @@ section {
           -webkit-transition: opacity 75ms ease-out 0.1125s;
           transition: opacity 75ms ease-out 0.1125s;
           font-size: 1.2rem; }
+          @media screen and (max-width: 768px) {
+            .btn .btn-inner .content-wrapper .btn-content .btn-content-inner {
+              font-size: 1rem; } }
           .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
             content: attr(label);
             padding-top: 9.5px;
