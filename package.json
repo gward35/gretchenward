@@ -14,7 +14,7 @@
   "scripts": {
     "build-sass": "node-sass --watch src/scss/style.scss src/css/style.css",
     "react": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "concurrently \"npm run build-sass\" \"npm run react\""
