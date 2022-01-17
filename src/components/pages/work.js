@@ -83,7 +83,7 @@ const Work = () => (
           timezone and datetime changes."
       >
         <RetroButtonExternal
-          link="https://www.eia.gov/realtime_grid/#/status?end=20160809T12"
+          link="https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/US48/US48"
           text="View Site"
         />
       </ProjectDescription>
