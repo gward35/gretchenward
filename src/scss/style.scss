@@ -5,6 +5,7 @@ $red: #de3c4b;
 $off-white: #fcfaea;
 $white: #fff;
 $black: #000;
+$pink-plum: #c06c84;
 
 body {
   width: 100%;
@@ -13,8 +14,13 @@ body {
   overflow-y: auto;
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
-  background-color: $off-white;
-  color: $off-black;
+  background: linear-gradient(
+    to right,
+    rgb(53, 92, 125),
+    rgb(108, 91, 123),
+    rgb(192, 108, 132)
+  );
+  color: $white;
 }
 
 h1 {
@@ -56,7 +62,7 @@ p {
 }
 
 a {
-  color: $off-black;
+  color: $white;
   text-decoration: none;
   font-weight: 200;
   transition: box-shadow 0.2s linear;
@@ -72,7 +78,7 @@ a {
   &:focus {
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 3px 0 0 $off-black;
+    box-shadow: 0 3px 0 0 $pink-plum;
   }
 }
 
@@ -99,6 +105,7 @@ picture {
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 input,
@@ -162,10 +169,10 @@ section {
       &.monogram {
         a {
           font-weight: 300;
-          color: $red;
+          color: $pink-plum;
           &:hover,
           &:focus {
-            box-shadow: 0 3px 0 0 $red;
+            box-shadow: 0 3px 0 0 $pink-plum;
           }
         }
       }
@@ -182,7 +189,7 @@ section {
   }
 
   .name {
-    color: #87f5fb;
+    color: $pink-plum;
   }
 
   .black-background & {
@@ -277,55 +284,67 @@ section {
   justify-content: flex-start;
   padding: 0 2.5rem;
 
-  .project {
-    border: 1px solid $off-black;
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px $darker-black;
-    height: 760px;
-    margin-bottom: 2rem;
-    margin-right: 1.6rem;
-    position: relative;
-    width: 100%;
-    @media screen and (max-width: 768px) {
-      flex: 0 1 calc(100% - 1rem);
-      margin-right: 0;
-      height: 100%;
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 1059px) {
-      flex: 0 1 calc(50% - 1rem);
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-    }
-
-    @media screen and (min-width: 1060px) {
-      flex: 0 1 calc(33% - 1rem);
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-    }
+  .project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
 
     .description {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 0 2rem 2rem 2rem;
-      height: 100%;
+      flex-basis: 50%;
 
       p {
         margin: 0 0 20px 0;
       }
 
       .btn {
-        width: 12em;
-        position: absolute;
-        bottom: 30px;
+        width: 300px;
         @media screen and (max-width: 768px) {
           position: relative;
           bottom: unset;
           width: 100%;
         }
+      }
+    }
+
+    .project {
+      border: 1px solid $white;
+      flex-basis: calc(35% - 1rem);
+      margin-bottom: 2rem;
+      margin-right: 1.6rem;
+      position: relative;
+      width: 100%;
+
+      &:after {
+        content: '';
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='2.5' cy='2.5' r='1' fill='%23fff'/%3E%3C/svg%3E")
+          repeat bottom left;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex: 0 1 calc(100% - 1rem);
+        margin-right: 0;
+        height: 100%;
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1059px) {
+        flex: 0 1 calc(50% - 1rem);
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @media screen and (min-width: 1060px) {
+        flex: 0 1 calc(35% - 1rem);
       }
     }
   }
@@ -372,7 +391,7 @@ section {
 
   &:hover {
     .btn-content-inner:before {
-      background-color: rgba(13, 13, 13, 0.1);
+      background-color: $pink-plum;
     }
   }
 
@@ -462,7 +481,7 @@ section {
       }
 
       &:before {
-        background-color: $darker-black;
+        background-color: #9d435d;
         content: ' ';
         border-radius: 3px;
         top: auto;
@@ -488,9 +507,9 @@ section {
 
       .btn-content {
         background-image: initial;
-        background-color: $off-white;
-        border: 2px solid $off-black;
-        color: $off-black;
+        background-color: $pink-plum;
+        border: 2px solid $pink-plum;
+        color: $white;
         position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -555,11 +574,11 @@ section {
           transform: translate3d(0, -50%, 0);
         }
 
-        &:hover,
-        &:focus {
-          background-color: $off-black;
-          color: $off-white;
-        }
+        // &:hover,
+        // &:focus {
+        //   background-color: $off-black;
+        //   color: $off-white;
+        // }
 
         .btn-content-inner {
           display: block;
@@ -607,6 +626,7 @@ section {
 
     .toast-text {
       padding: 1rem;
+      color: $off-black;
     }
 
     .toast-close {
