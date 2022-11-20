@@ -1,21 +1,40 @@
 import React from 'react'
-import ProjectItem from '../project-item'
-import ProjectDescription from '../project-description'
-import RetroButtonExternal from '../retroButtonExternal'
-import stsci from '../../img/stsci.jpg'
-import trilateral from '../../img/trilateral.jpg'
-import realtimegrid from '../../img/930.jpg'
-import gimmepatterns from '../../img/gimmepatterns.png'
-import sanjose from '../../img/sanjose.png'
+import ProjectItem from '../components/project-item'
+import ProjectDescription from '../components/project-description'
+import RetroButtonExternal from '../components/retroButtonExternal'
+import stsci from '../img/stsci.jpg'
+import trilateral from '../img/trilateral.jpg'
+import realtimegrid from '../img/930.jpg'
+import gimmepatterns from '../img/gimmepatterns.png'
+import sanjose from '../img/sanjose.png'
+import pbskids from '../img/pbskids.png'
+import pbs from '../img/pbs.png'
 
 const Work = () => (
   <div className="web-projects">
-    <ProjectItem>
-      <img src={sanjose} alt="City of San Jose web assistant" />
+    <div className="project-container">
+      <ProjectDescription
+        className="description"
+        title="PBS Smart TV Streaming App"
+        subtitle="App / API  Development + Video"
+        description="The PBS SMART TV Streaming app is currently available on Samsung and VIZIO platforms. It leverages React and HLS.js for video processing."
+      ></ProjectDescription>
+      <ProjectItem image={pbs} alt="PBS Nova Screen Caption" />
+    </div>
+    <div className="project-container">
+      <ProjectDescription
+        className="description"
+        title="PBS Kids Smart TV Streaming App"
+        subtitle="App / API  Development + Video"
+        description="The PBS Kids SMART TV Streaming app is currently available on Samsung and VIZIO platforms. It leverages React and HLS.js for video processing."
+      ></ProjectDescription>
+      <ProjectItem image={pbskids} alt="PBS Kids Home Screen Caption" />
+    </div>
+    <div className="project-container">
       <ProjectDescription
         className="description"
         title="Resident Web Assistant"
-        subtitle="Web / API  Development + Language Processing"
+        subtitle="App / API  Development + Language Processing"
         description="The Resident Web Assistant App features a React and TypeScript front end and aims to assist residents with pertinent questions they may have about city services. Users can pick from suggested questions or submit a query to be pointed to the correct information."
       >
         <RetroButtonExternal
@@ -23,9 +42,9 @@ const Work = () => (
           text="View Site"
         />
       </ProjectDescription>
-    </ProjectItem>
-    <ProjectItem>
-      <img src={gimmepatterns} alt="Gimme patterns pattern generator" />
+      <ProjectItem image={sanjose} alt="City of San Jose web assistant" />
+    </div>
+    <div className="project-container">
       <ProjectDescription
         className="description"
         title="Gimme Patterns"
@@ -37,9 +56,12 @@ const Work = () => (
           text="View Site"
         />
       </ProjectDescription>
-    </ProjectItem>
-    <ProjectItem>
-      <img src={stsci} alt="Space Telescope Science Institute" />
+      <ProjectItem
+        image={gimmepatterns}
+        alt="Gimme patterns pattern generator"
+      />
+    </div>
+    <div className="project-container">
       <ProjectDescription
         className="description"
         title="STSCI"
@@ -51,12 +73,9 @@ const Work = () => (
       >
         <RetroButtonExternal link="http://www.stsci.edu/" text="View Site" />
       </ProjectDescription>
-    </ProjectItem>
-    <ProjectItem>
-      <img
-        src={trilateral}
-        alt="North American Cooperation on Energy Information"
-      />
+      <ProjectItem image={stsci} alt="Space Telescope Science Institute" />
+    </div>
+    <div className="project-container">
       <ProjectDescription
         className="description"
         title="Trilateral"
@@ -67,9 +86,12 @@ const Work = () => (
       >
         <RetroButtonExternal link="http://www.nacei.org/" text="View Site" />
       </ProjectDescription>
-    </ProjectItem>
-    <ProjectItem>
-      <img src={realtimegrid} alt="U.S. ELECTRIC SYSTEM OPERATING DATA" />
+      <ProjectItem
+        image={trilateral}
+        alt="North American Cooperation on Energy Information"
+      />
+    </div>
+    <div className="project-container">
       <ProjectDescription
         className="description"
         title="930"
@@ -87,7 +109,12 @@ const Work = () => (
           text="View Site"
         />
       </ProjectDescription>
-    </ProjectItem>
+
+      <ProjectItem
+        image={realtimegrid}
+        alt="U.S. ELECTRIC SYSTEM OPERATING DATA"
+      />
+    </div>
   </div>
 )
 

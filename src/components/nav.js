@@ -7,12 +7,12 @@ const Nav = () => {
     <nav className="navigation">
       <ul className="nav-items">
         <li className="monogram">
-          <RouterLink exact to="/">
+          <RouterLink exact="true" to="/">
             GW
           </RouterLink>
         </li>
         <li>
-          <RouterLink exact to="/work">
+          <RouterLink exact="true" to="/work">
             Work
           </RouterLink>
         </li>
