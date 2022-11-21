@@ -210,6 +210,9 @@ section {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px; }
+    @media screen and (max-width: 768px) {
+      .web-projects .project-container {
+        flex-direction: column; } }
     .web-projects .project-container .description {
       display: flex;
       flex-direction: column;
