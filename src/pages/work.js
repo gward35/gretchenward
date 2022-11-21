@@ -13,24 +13,25 @@ import pbs from '../img/pbs.png'
 const Work = () => (
   <div className="web-projects">
     <div className="project-container">
+      <ProjectItem image={pbs} alt="PBS Nova Screen Caption" />
       <ProjectDescription
         className="description"
         title="PBS Smart TV Streaming App"
         subtitle="App / API  Development + Video"
         description="The PBS SMART TV Streaming app is currently available on Samsung and VIZIO platforms. It leverages React and HLS.js for video processing."
       ></ProjectDescription>
-      <ProjectItem image={pbs} alt="PBS Nova Screen Caption" />
     </div>
     <div className="project-container">
+      <ProjectItem image={pbskids} alt="PBS Kids Home Screen Caption" />
       <ProjectDescription
         className="description"
         title="PBS Kids Smart TV Streaming App"
         subtitle="App / API  Development + Video"
         description="The PBS Kids SMART TV Streaming app is currently available on Samsung and VIZIO platforms. It leverages React and HLS.js for video processing."
       ></ProjectDescription>
-      <ProjectItem image={pbskids} alt="PBS Kids Home Screen Caption" />
     </div>
     <div className="project-container">
+      <ProjectItem image={sanjose} alt="City of San Jose web assistant" />
       <ProjectDescription
         className="description"
         title="Resident Web Assistant"
@@ -42,9 +43,12 @@ const Work = () => (
           text="View Site"
         />
       </ProjectDescription>
-      <ProjectItem image={sanjose} alt="City of San Jose web assistant" />
     </div>
     <div className="project-container">
+      <ProjectItem
+        image={gimmepatterns}
+        alt="Gimme patterns pattern generator"
+      />
       <ProjectDescription
         className="description"
         title="Gimme Patterns"
@@ -56,12 +60,9 @@ const Work = () => (
           text="View Site"
         />
       </ProjectDescription>
-      <ProjectItem
-        image={gimmepatterns}
-        alt="Gimme patterns pattern generator"
-      />
     </div>
     <div className="project-container">
+      <ProjectItem image={stsci} alt="Space Telescope Science Institute" />
       <ProjectDescription
         className="description"
         title="STSCI"
@@ -73,9 +74,12 @@ const Work = () => (
       >
         <RetroButtonExternal link="http://www.stsci.edu/" text="View Site" />
       </ProjectDescription>
-      <ProjectItem image={stsci} alt="Space Telescope Science Institute" />
     </div>
     <div className="project-container">
+      <ProjectItem
+        image={trilateral}
+        alt="North American Cooperation on Energy Information"
+      />
       <ProjectDescription
         className="description"
         title="Trilateral"
@@ -86,12 +90,12 @@ const Work = () => (
       >
         <RetroButtonExternal link="http://www.nacei.org/" text="View Site" />
       </ProjectDescription>
-      <ProjectItem
-        image={trilateral}
-        alt="North American Cooperation on Energy Information"
-      />
     </div>
     <div className="project-container">
+      <ProjectItem
+        image={realtimegrid}
+        alt="U.S. ELECTRIC SYSTEM OPERATING DATA"
+      />
       <ProjectDescription
         className="description"
         title="930"
@@ -109,11 +113,6 @@ const Work = () => (
           text="View Site"
         />
       </ProjectDescription>
-
-      <ProjectItem
-        image={realtimegrid}
-        alt="U.S. ELECTRIC SYSTEM OPERATING DATA"
-      />
     </div>
   </div>
 )
