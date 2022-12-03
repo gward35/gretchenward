@@ -39,7 +39,7 @@ const Work = () => (
         description="The Resident Web Assistant App features a React and TypeScript front end and aims to assist residents with pertinent questions they may have about city services. Users can pick from suggested questions or submit a query to be pointed to the correct information."
       >
         <RetroButtonExternal
-          link="https://sj-assistant-staging.herokuapp.com/iframe/"
+          link="https://www.sanjoseca.gov/"
           text="View Site"
         />
       </ProjectDescription>
