@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Nav from './components/nav'
 import Home from './pages/home'
 import Work from './pages/work'
-import { withToastProvider } from './components/Toast'
 import './css/style.css'
 import { CSSTransition } from 'react-transition-group'
 
@@ -38,6 +37,4 @@ const App = () => {
   )
 }
 
-const AppWithToastProvider = withToastProvider(App)
-
-export default AppWithToastProvider
+export default App

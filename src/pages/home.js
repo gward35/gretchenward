@@ -1,7 +1,6 @@
 import React from 'react'
 import RetroButton from '../components/retroButton'
 import About from '../components/about'
-import Contact from '../components/contactForm'
 
 const Home = () => (
   <>
@@ -15,11 +14,6 @@ const Home = () => (
     <section className="black-background">
       <div className="about" id="about">
         <About />
-      </div>
-    </section>
-    <section className="off-white-background">
-      <div className="contact-form" id="contact">
-        <Contact />
       </div>
     </section>
   </>
